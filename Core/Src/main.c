@@ -25,7 +25,7 @@ TIM_HandleTypeDef htim6;
 TIM_HandleTypeDef htim7;
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart4;
-uint8_t res = 0;
+char res;
 
 void SystemClock_Config(void);
 int main(void)

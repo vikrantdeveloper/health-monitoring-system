@@ -129,13 +129,13 @@ void USART3_4_IRQHandler()
 
      HAL_UART_IRQHandler(&huart4);
      char string_ecg[255];
-     if(rece[0]=='1')
+     if(rece=='0')
      {
     	 string_conversion(sensor_value.body_temperature, &string_ecg[0] , 5);
      	 HAL_UART_Transmit(&huart4,string_ecg, strlen(string_ecg),HAL_MAX_DELAY);
 
      }
-     else if(rece[0]=='2')
+     else if(rece=='1')
      {
     	 if(sensor_value.body_ecg == 0)
     	 {
@@ -148,7 +148,7 @@ void USART3_4_IRQHandler()
     		 HAL_UART_Transmit(&huart4, string_ecg, strlen(string_ecg), HAL_MAX_DELAY);
     	 }
         }
-     else if(rece[0]=='3')
+     else if(rece=='2')
      {
     	 	string_conversion(sensor_value.body_heartbeat, &string_ecg[0] , 5);
     	    HAL_UART_Transmit(&huart4, string_ecg, sizeof(string_ecg),HAL_MAX_DELAY);
@@ -160,7 +160,7 @@ void USART3_4_IRQHandler()
  *           1 - send data of ECG sensor
  *           2-  send data of heartbeat
  */
-void uart_receive(uint8_t *res)
+void uart_receive(char *res)
 {
 	HAL_UART_Receive_IT(&huart4, res, sizeof(res));
 }
