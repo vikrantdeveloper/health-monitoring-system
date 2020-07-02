@@ -1,4 +1,4 @@
-Minor Project 2019 - Health Monitoring system 
+Major Project 2019 - Health Monitoring system 
 
 Sensors are interfaced to the embedded world which constantly records data and the data is fetched through server and analyzed through graphical representation. The attached sensors on patient’s body form a wireless body sensor network 
 the heart rate, blood pressure and so on. The project can detect the abnormal conditions, issue an alarm to the patient and present a graphical view to the physician
