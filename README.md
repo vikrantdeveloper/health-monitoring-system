@@ -5,6 +5,8 @@ the heart rate, blood pressure and so on. The project can detect the abnormal co
 
 Sensors such as EG828 , LM35 and Digital Heartbeat sensor are interfaced and data is transfered to PC via USB to TTL converter. For further details , Kindly refer to the technical document.
 
+Internally , 12 Bit ADC is used for conversion of values from analog to digital. Therefore , while calcuating temperature , the formula that is implemented is 
+= 3.3 * 1000 /4095 (Where 3.3 V is the Internal Compartor voltage to ADC)
 
 
 
